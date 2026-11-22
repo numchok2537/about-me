@@ -13,14 +13,17 @@
 }
 
 :root {
-  --navy: #02182d;
-  --navy-light: #0b2a4a;
-  --gold: #e8a23c;
-  --bg: #f7f9fc;
+  --navy: #0a2540;
+  --navy-light: #123a63;
+  --accent: #2b6fde;
+  --accent-dark: #1d4fa8;
+  --accent-tint: #e8f0fd;
+  --placeholder-color: #b5660e;
+  --bg: #f2f6fc;
   --card: #ffffff;
-  --border: #e2e8f3;
-  --text: #22304a;
-  --muted: #6b7a93;
+  --border: #d7e4f5;
+  --text: #16263c;
+  --muted: #56698a;
 }
 
 * {
@@ -34,25 +37,26 @@ html {
 body {
   margin: 0;
   font-family: "TH Sarabun PSK", "Leelawadee UI", "Tahoma", sans-serif;
-  font-size: 20px;
+  font-size: 21px;
+  line-height: 1.55;
   background: var(--bg);
   color: var(--text);
 }
 
 @media (min-width: 900px) {
   body {
-    font-size: 23px;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    font-size: 25px;
+    font-size: 26px;
   }
 }
 
 .placeholder {
-  color: var(--gold);
+  color: var(--placeholder-color);
   font-style: italic;
 }
 
@@ -66,21 +70,21 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
-  padding: 10px 12px;
+  padding: 12px 12px;
 }
 
 nav a {
-  color: #dce6f5;
+  color: #d3e3fb;
   text-decoration: none;
-  font-size: 17px;
-  padding: 8px 14px;
+  font-size: 18px;
+  padding: 8px 16px;
   border-radius: 999px;
   white-space: nowrap;
 }
 
 nav a:hover,
 nav a:focus {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
 
@@ -93,18 +97,18 @@ nav a:focus {
 }
 
 .hero .avatar {
-  width: 128px;
-  height: 128px;
+  width: 136px;
+  height: 136px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
   font-size: 52px;
   font-weight: bold;
-  color: var(--navy);
-  border: 4px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border: 4px solid rgba(255, 255, 255, 0.45);
   overflow: hidden;
 }
 
@@ -115,41 +119,42 @@ nav a:focus {
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin: 0 0 6px;
+  font-size: 42px;
+  margin: 0 0 8px;
 }
 
 .hero .role {
-  font-size: 22px;
-  color: var(--gold);
-  margin: 0 0 14px;
+  font-size: 24px;
+  color: #a9c8fb;
+  margin: 0 0 16px;
+  font-weight: bold;
 }
 
 .hero .tagline {
-  max-width: 560px;
+  max-width: 580px;
   margin: 0 auto;
-  font-size: 19px;
-  color: #cfd9ec;
-  line-height: 1.6;
+  font-size: 20px;
+  color: #d3e3fb;
+  line-height: 1.7;
 }
 
 @media (min-width: 900px) {
   .hero {
-    padding: 72px 20px 84px;
+    padding: 76px 20px 88px;
   }
   .hero .avatar {
-    width: 168px;
-    height: 168px;
+    width: 176px;
+    height: 176px;
   }
   .hero h1 {
-    font-size: 52px;
+    font-size: 54px;
   }
   .hero .role {
-    font-size: 27px;
+    font-size: 29px;
   }
   .hero .tagline {
-    max-width: 720px;
-    font-size: 23px;
+    max-width: 740px;
+    font-size: 24px;
   }
 }
 
@@ -175,7 +180,7 @@ main {
 }
 
 section {
-  padding: 48px 0;
+  padding: 50px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -186,47 +191,50 @@ section:last-of-type {
 .section-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 26px;
 }
 
 .section-title .num {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   border-radius: 50%;
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--accent);
+  color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .section-title h2 {
-  font-size: 26px;
+  font-size: 28px;
   margin: 0;
   color: var(--navy);
+  font-weight: bold;
 }
 
 .card {
   background: var(--card);
   border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
   border-radius: 14px;
-  padding: 20px 24px;
-  margin-bottom: 16px;
+  padding: 22px 26px;
+  margin-bottom: 18px;
 }
 
 .card h3 {
-  margin: 0 0 6px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 21px;
   color: var(--navy);
+  font-weight: bold;
 }
 
 .card .meta {
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
@@ -239,13 +247,13 @@ section:last-of-type {
 
 .fields dl {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 10px 16px;
+  grid-template-columns: 180px 1fr;
+  gap: 12px 18px;
   margin: 0;
 }
 
 .fields dt {
-  color: var(--muted);
+  color: var(--accent-dark);
   font-weight: bold;
 }
 
@@ -263,8 +271,9 @@ section:last-of-type {
 .work-card {
   background: var(--card);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
   border-radius: 14px;
-  padding: 18px;
+  padding: 20px;
   text-decoration: none;
   color: inherit;
   display: block;
@@ -273,57 +282,58 @@ section:last-of-type {
 
 .work-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(2, 24, 45, 0.08);
+  box-shadow: 0 8px 20px rgba(10, 37, 64, 0.1);
 }
 
 .work-card .icon {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 8px;
 }
 
 .work-card h3 {
-  margin: 0 0 6px;
-  font-size: 19px;
+  margin: 0 0 8px;
+  font-size: 20px;
   color: var(--navy);
+  font-weight: bold;
 }
 
 .work-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .work-card .link-hint {
   display: inline-block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: var(--gold);
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--accent-dark);
   font-weight: bold;
 }
 
 /* ---- Philosophy ---- */
 .philosophy-list {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .philosophy-item {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
-  background: var(--card);
+  background: var(--accent-tint);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 16px 18px;
+  padding: 18px 20px;
 }
 
 .philosophy-item .bullet {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background: var(--gold);
-  margin-top: 8px;
+  background: var(--accent);
+  margin-top: 9px;
   flex-shrink: 0;
 }
 
@@ -331,23 +341,23 @@ section:last-of-type {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
 .contact-item {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 16px 18px;
+  padding: 18px 20px;
 }
 
 .contact-item .label {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .contact-item .value {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--navy);
 }
@@ -363,14 +373,14 @@ section:last-of-type {
 
 footer {
   text-align: center;
-  padding: 24px;
+  padding: 26px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
   .fields dl {
     grid-template-columns: 1fr;
