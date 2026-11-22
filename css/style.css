@@ -179,6 +179,13 @@ main {
   }
 }
 
+@media (min-width: 1300px) {
+  main {
+    max-width: 1340px;
+    padding: 0 24px;
+  }
+}
+
 section {
   padding: 50px 0;
   border-bottom: 1px solid var(--border);
